@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gurukula Kendra Kinnipadavu</title>
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
 </head>
@@ -22,8 +24,8 @@
 
           <div class="links">
             <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100"><a href="#home" data-key="home">Home</a></div>
-            <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"><a href="" data-key="about">About Us</a></div>
-            <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"><a href="" data-key="contact">Contact Us</a></div>
+            <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"><a href="#about" data-key="about">About Us</a></div>
+            <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"><a href="#contact" data-key="contact">Contact Us</a></div>
           </div>
 
           <div class="langauge">
@@ -50,8 +52,8 @@
             </p>
 
             <div class="home-buttons">
-                <a href="" data-key="aboutbtn">About Us</a>
-                <a href="" data-key="contactbtn">Contact Us</a>
+                <a href="#about" data-key="aboutbtn" >About Us</a>
+                <a href="#contact" data-key="contactbtn">Contact Us</a>
             </div>
         </div>
 
@@ -66,12 +68,12 @@
         <div class="about-container">
             <div class="about-content">
 
-                   <h2 data-key="about-us">About Us</h2>
-                   <p data-key="about-desc"> Gurukula Bala Samskara Kendra, Kinnipadavu is dedicated
+                   <h2 data-key="aboutus">About Us</h2>
+                   <p data-key="aboutdesc"> Gurukula Bala Samskara Kendra, Kinnipadavu is dedicated
                 to nurturing children with values, culture, discipline
                 and knowledge.</p>
 
-                <p data-key="about-desc2">Gurukula Bala Samskara Kendra, Kinnipadavu is a place where children come together every Sunday to learn and experience our traditional values, culture and knowledge. Along with regular lessons, children participate in Yoga, Bhajans, Kunitha Bhajana, Chende and other cultural activities. These activities help children develop discipline, concentration, confidence, devotion and respect for our rich cultural heritage.</p>
+                <p data-key="aboutdesc2">Gurukula Bala Samskara Kendra, Kinnipadavu is a place where children come together every Sunday to learn and experience our traditional values, culture and knowledge. Along with regular lessons, children participate in Yoga, Bhajans, Kunitha Bhajana, Chende and other cultural activities. These activities help children develop discipline, concentration, confidence, devotion and respect for our rich cultural heritage.</p>
             </div>
            
         </div>
@@ -80,11 +82,66 @@
 
     <section id="contact">
         <div class="contact-container">
-            
+
+            <div class="contact-heading">
+                <h2 data-key="cont2">Contact Us</h2>
+              <p data-key="touch">Get in touch with Gurukula Bala Samskara Kendra, Kinnipadavu.</p>
+            </div>
+
+         <div class="contact-cards">
+
+            <div class="contact-card">
+                <div class="contact-icon">
+                    <i class="fas fa-location-dot"></i>
+                </div>
+
+                <h3 data-key="loc">location</h3>
+                <p data-key="locdetail">Bramha Mugera Mahakali Daivastana, Kinnipadavu, Bajpe</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Kinnipadavu"
+                   target="_blank" data-key="linkname1">
+                    View on Google Maps
+                </a>
+            </div>
+
+
+            <div class="contact-card">
+                <div class="contact-icon">
+                     <i class="fas fa-envelope"></i>
+                </div>
+                <h3 data-key="ema">Email</h3>
+                <p> </p>
+                <a href="mailto:your-email@gmail.com" data-key="linkname2">
+                    Send Email
+                </a>
+            </div>
+
+            <div class="contact-card">
+            <div class="contact-icon">
+                    <i class="fas fa-phone"></i>
+                </div>
+                <h3 data-key="phone">Mobile</h3>
+                <p>+91 XXXXX XXXXX</p>
+                <a href="tel:+91XXXXXXXXXX" data-key="cont3">
+                    Contact
+                </a>
+            </div>
+
+
+            <div class="contact-card">
+                <div class="contact-icon">
+                    <i class="fab fa-whatsapp"></i>
+                </div>
+                <h3 data-key="whats">WhatsApp</h3>
+                <p data-key="whatdesc">Chat with us on WhatsApp</p>
+                <a href="https://wa.me/91XXXXXXXXXX" target="_blank" data-key="msgwa">
+                    Message on WhatsApp
+                </a>
+            </div>
         </div>
+
     </section>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 <script>
     AOS.init();
@@ -113,7 +170,24 @@
 
            aboutbtn: "About Us",
 
-           contactbtn: "Contact Us"
+           contactbtn: "Contact Us",
+
+           aboutus: "About Us",
+
+           aboutdesc: `Gurukula Bala Samskara Kendra, Kinnipadavu is dedicated to nurturing children with values, culture, discipline and knowledge.`,
+
+           aboutdesc2: `Gurukula Bala Samskara Kendra, Kinnipadavu is a place where children come together every Sunday to learn and experience our traditional values, culture and knowledge. Along with regular lessons, children participate in Yoga, Bhajans, Kunitha Bhajana, Chende and other cultural activities. These activities help children develop discipline, concentration, confidence, devotion and respect for our rich cultural heritage.`,
+
+           cont2:"Contact Us ",
+
+           touch:`Get in touch with Gurukula Bala Samskara Kendra, Kinnipadavu`,
+
+           location:"location",
+
+           locdetail:`Bramha Mugera Mahakali Daivastana, Kinnipadavu, Bajpe`,
+
+           linkname1:"View on Google Maps",
+
     },
 
     kn:{
@@ -139,7 +213,24 @@
 
         aboutbtn: "ನಮ್ಮ ಬಗ್ಗೆ",
 
-        contactbtn: "ಸಂಪರ್ಕ"
+        contactbtn: "ಸಂಪರ್ಕ",
+
+        aboutus:"ನಮ್ಮ ಬಗ್ಗೆ",
+
+        aboutdesc:`ಗುರುಕುಲ ಬಾಲ ಸಂಸ್ಕಾರ ಕೇಂದ್ರ, ಕಿನ್ನಿಪದವು ಮಕ್ಕಳಲ್ಲಿ ಮೌಲ್ಯಗಳು, ಸಂಸ್ಕೃತಿ, ಶಿಸ್ತು ಮತ್ತು ಜ್ಞಾನವನ್ನು ಬೆಳೆಸಲು ಸಮರ್ಪಿತವಾಗಿದೆ.`,
+       
+        aboutdesc2: `ಗುರುಕುಲ ಬಾಲ ಸಂಸ್ಕಾರ ಕೇಂದ್ರ, ಕಿನ್ನಿಪದವು ಇಲ್ಲಿ ಮಕ್ಕಳಿಗೆ ಪ್ರತಿ ಭಾನುವಾರ ನಮ್ಮ ಸಾಂಪ್ರದಾಯಿಕ ಮೌಲ್ಯಗಳು, ಸಂಸ್ಕೃತಿ ಮತ್ತು ಜ್ಞಾನವನ್ನು ಕಲಿಸಲಾಗುತ್ತದೆ. ಧಾರ್ಮಿಕ ಪಾಠಗಳ ಜೊತೆಗೆ, ಮಕ್ಕಳು ಯೋಗ, ಭಜನೆ, ಕುಣಿತ ಭಜನೆ, ಚೆಂಡೆ ಹಾಗೂ ಇತರ ಸಾಂಸ್ಕೃತಿಕ ಚಟುವಟಿಕೆಗಳಲ್ಲಿ ಭಾಗವಹಿಸುತ್ತಾರೆ. ಈ ಚಟುವಟಿಕೆಗಳು ಮಕ್ಕಳಲ್ಲಿ ಶಿಸ್ತು, ಏಕಾಗ್ರತೆ, ಆತ್ಮವಿಶ್ವಾಸ, ಭಕ್ತಿ ಮತ್ತು ನಮ್ಮ ಶ್ರೀಮಂತ ಹಿಂದು ಸಂಸ್ಕಾರದ ಬಗ್ಗೆ ಗೌರವವನ್ನು ಬೆಳೆಸಲು ಸಹಾಯ ಮಾಡುತ್ತವೆ.`,
+        
+        cont2:" ನಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸಿ",
+
+        touch:`ಗುರುಕುಲ ಬಾಲ ಸಂಸ್ಕಾರ ಕೇಂದ್ರ, ಕಿನ್ನಿಪದವಿನ ಸಂಪರ್ಕದಲ್ಲಿರಿ.`,
+
+        loc:"ವಿಳಾಸ",
+
+        locdetail: `ಬ್ರಹ್ಮ ಮುಗೇರ ಮಹಾಕಾಳಿ ದೈವಸ್ಥಾನ, ಕಿನ್ನಿಪದವು, ಬಜ್ಪೆ 574142`,
+
+        linkname1: "ಗೂಗಲ್ ಮ್ಯಾಪ್‌‍ನಲ್ಲಿ ವೀಕ್ಷಿಸಿ"
+
     }
    
    };  
