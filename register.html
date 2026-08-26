@@ -54,26 +54,27 @@
      <div id="form-container">
         <h2>Enter Details / ಮಾಹಿತಿ  ದಾಖಲಿಸಿ </h2>
         <form action="">
-            <label for="name">Child Name/ ಮಗುವಿನ ಹೆಸರು</label>
-            <input type="text" name="name">
+            <label for="name">Child Name/ ಮಗುವಿನ ಹೆಸರು <span>*</span></label>
+            <input type="text" name="name" minlength="2" maxlength="50" required>
 
-            <label for="phone">Phone Number/ ಮೊಬೈಲ್ ಸಂಖ್ಯೆ </label>
-            <input type="text" name="phone">
+            <label for="phone">Phone Number/ ಮೊಬೈಲ್ ಸಂಖ್ಯೆ <span>*</span> </label>
+            <input type="tel" name="phone" pattern="[6-9][0-9]{9}" maxlength="13" required>
 
-            <label for="fname">Father Name / ತಂದೆಯ ಹೆಸರು </label>
-            <input type="text" name="fname">
+            <label for="fname">Father Name / ತಂದೆಯ ಹೆಸರು <span>*</span> </label>
+            <input type="text" name="fname" required>
 
-            <label for="mname">Mother Name/ ತಾಯಿಯ  ಹೆಸರು </label>
-            <input type="text" name="mname">
+            <label for="mname">Mother Name/ ತಾಯಿಯ  ಹೆಸರು <span>*</span> </label>
+            <input type="text" name="mname" required>
 
-             <label for="age">Enter Age/ ವಿದ್ಯಾರ್ಥಿಯ ವಯಸ್ಸು </label>
-            <input type="age" name="age">
+             <label for="age">Enter Age/ ವಿದ್ಯಾರ್ಥಿಯ ವಯಸ್ಸು <span>*</span></label>
+            <input type="age" name="age" min="3" max="30" required>
 
-            <label for="address">Enter Address/ ವಿದ್ಯಾರ್ಥಿಯ ವಿಳಾಸ </label>
-            <textarea name="address id=""></textarea>
+            <label for="address">Enter Address/ ವಿದ್ಯಾರ್ಥಿಯ ವಿಳಾಸ <span>*</span> </label>
+            <textarea name="address" id="" required
+            ></textarea>
 
-            <label for="">Select a Class / ತರಗತಿ </label>
-            <select name="class" id="">
+            <label for="">Select a Class / ತರಗತಿ <span>*</span> </label>
+            <select name="class" id=""  required>
                 <option value="1st">UKG, LKG,, Anganavadi /ಯೆಲ್ಕೆಜಿ, ಯೂಕೆಜಿ, ಅಂಗನವಾಡಿ  </option>
                 <option value="1st">1st Standard / ಒಂದನೇ ತರಗತಿ </option>
                 <option value="1st">2nd Standard/ ಎರಡನೇ ತರಗತಿ</option>
@@ -91,8 +92,8 @@
                 <option value="1st">Other/ ಇತರೆ</option>
             </select>
 
-            <label for="schoolname">School Name/ ಶಾಲೆಯ  ಹೆಸರು</label>
-            <input type="schoolname" name="schoolname">
+            <label for="schoolname">School Name/ ಶಾಲೆಯ  ಹೆಸರು <span>*</span></label>
+            <input type="schoolname" name="schoolname" required>
 
             <input type="submit" value="Submit/ ಸಲ್ಲಿಸಿ"> 
         </form>

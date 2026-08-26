@@ -732,3 +732,21 @@ footer {
 #form-container input[type="submit"]:hover {
     background-color: rgb(145, 34, 34);
 }
+
+span{
+    color: red;
+}
+
+
+#form-container input:invalid
+#form-container select:invalid
+#form-container textarea:invalid{
+    border: 1px solid red;
+}
+
+
+#form-container input:valid
+#form-container select:valid
+#form-container textarea:invavalidlid{
+    border: 1px solid green;
+}
