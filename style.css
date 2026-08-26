@@ -671,18 +671,16 @@ footer {
     font-weight: 100;
 }
 
-#form-container{
+#form-container {
     width: 400px;
     margin: 60px auto;
-    padding: 20px;
-    height: auto;
+    padding: 25px;
     background-color: white;
     border: 2px solid black;
     border-radius: 40px;
 }
 
-
-#form-container h2{
+#form-container h2 {
     margin: 10px 0 30px;
     text-align: center;
 }
@@ -691,27 +689,41 @@ footer {
     text-align: center;
 }
 
-
-
 #form-container label {
     display: block;
     margin: 15px 0 5px;
+    font-size: 16px;
 }
 
 #form-container input,
 #form-container select {
     display: block;
     width: 250px;
-    height: 30px;
+    height: 40px;
     margin: 0 auto 15px;
-   padding:40px ;
-    border-radius:1px solid red;
-    border-radius: 50px;
-    padding: 0px;
-   
+    padding: 5px 10px;
+    border: 1px solid #aaa;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+#form-container input:focus,
+#form-container select:focus {
+    outline: none;
+    border: 2px solid brown;
 }
 
 #form-container input[type="submit"] {
     width: 120px;
+    height: 40px;
+    margin-top: 20px;
+    background-color: brown;
+    color: white;
+    border: none;
+    border-radius: 20px;
     cursor: pointer;
+}
+
+#form-container input[type="submit"]:hover {
+    background-color: rgb(145, 34, 34);
 }
