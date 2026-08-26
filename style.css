@@ -706,6 +706,11 @@ footer {
     border-radius: 8px;
     font-size: 14px;
 }
+ textarea{
+    width: 250px;
+    height: 100px;
+    resize: none;
+}
 
 #form-container input:focus,
 #form-container select:focus {
