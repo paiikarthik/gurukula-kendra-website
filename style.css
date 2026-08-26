@@ -339,7 +339,19 @@ nav {
 }
 
 
+#btn1{
+    width: 90px;
+    height: 30px;
+    border:2px solid brown;
+    border-radius:120px;
+    background:white;
+    color:brown;
+}
 
+#btn1:hover{
+    color:white;
+    background:brown;
+}
 @media (max-width: 768px) {
 
     html,
@@ -640,9 +652,6 @@ nav {
 }
 
 
-/* =========================
-   FOOTER
-   ========================= */
 
 footer {
     width: 100%;
