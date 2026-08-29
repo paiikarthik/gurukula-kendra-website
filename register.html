@@ -53,47 +53,47 @@
 <div id="form-main">
      <div id="form-container">
         <h2>Enter Details / ಮಾಹಿತಿ  ದಾಖಲಿಸಿ </h2>
-        <form action="">
+        <form id="registForm">
             <label for="name">Child Name/ ಮಗುವಿನ ಹೆಸರು <span>*</span></label>
-            <input type="text" name="name" minlength="2" maxlength="50" required>
+            <input type="text" name="name" id="name" minlength="2" maxlength="50" required>
 
             <label for="phone">Phone Number/ ಮೊಬೈಲ್ ಸಂಖ್ಯೆ <span>*</span> </label>
-            <input type="tel" name="phone" pattern="[6-9][0-9]{9}" maxlength="13" required>
+            <input type="tel" id="phone" name="phone" pattern="[6-9][0-9]{9}" maxlength="13" required>
 
             <label for="fname">Father Name / ತಂದೆಯ ಹೆಸರು <span>*</span> </label>
-            <input type="text" name="fname" required>
+            <input type="text" name="fname" id="phone" required>
 
             <label for="mname">Mother Name/ ತಾಯಿಯ  ಹೆಸರು <span>*</span> </label>
-            <input type="text" name="mname" required>
+            <input type="text" name="mname" id="mname" required>
 
              <label for="age">Enter Age/ ವಿದ್ಯಾರ್ಥಿಯ ವಯಸ್ಸು <span>*</span></label>
-            <input type="age" name="age" min="3" max="30" required>
+            <input type="number" name="age" id="age" min="3" max="30" required>
 
             <label for="address">Enter Address/ ವಿದ್ಯಾರ್ಥಿಯ ವಿಳಾಸ <span>*</span> </label>
-            <textarea name="address" id="" required
+            <textarea name="address" id="address" required
             ></textarea>
 
             <label for="">Select a Class / ತರಗತಿ <span>*</span> </label>
-            <select name="class" id=""  required>
-                <option value="1st">UKG, LKG,, Anganavadi /ಯೆಲ್ಕೆಜಿ, ಯೂಕೆಜಿ, ಅಂಗನವಾಡಿ  </option>
+            <select name="class" id="class"  required>
+                <option value="ukg">UKG, LKG,, Anganavadi /ಯೆಲ್ಕೆಜಿ, ಯೂಕೆಜಿ, ಅಂಗನವಾಡಿ  </option>
                 <option value="1st">1st Standard / ಒಂದನೇ ತರಗತಿ </option>
-                <option value="1st">2nd Standard/ ಎರಡನೇ ತರಗತಿ</option>
-                <option value="1st">3rd Standard/ ಮೂರನೇ  ತರಗತಿ</option>
-                <option value="1st">4th Standard/ ನಾಲ್ಕನೇ ತರಗತಿ</option>
-                <option value="1st">5th Standard/ ಐದನೇ ತರಗತಿ</option>
-                <option value="1st">6th Standard/ ಆರನೇ  ತರಗತಿ</option>
-                <option value="1st">7th Standard/ ಏಳನೇ ತರಗತಿ</option>
-                <option value="1st">8th Standard/ ಎಂಟನೇ ತರಗತಿ</option>
-                <option value="1st">9th Standard/ ಒಂಬತ್ತನೇ ತರಗತಿ</option>
-                <option value="1st">10th Standard/ ಹತ್ತನೇತರಗತಿ </option>
-                <option value="1st">I PUC/ 2nd PUC /[11/12th] ಪಿಯುಸಿ </option>
-                <option value="1st">Undergraduate /ಪದವಿಪೂರ್ವ</option>
-                <option value="1st">PostGraduate/ ಸ್ನಾತಕೋತ್ತರ </option>
-                <option value="1st">Other/ ಇತರೆ</option>
+                <option value="2nd">2nd Standard/ ಎರಡನೇ ತರಗತಿ</option>
+                <option value="3rd">3rd Standard/ ಮೂರನೇ  ತರಗತಿ</option>
+                <option value="4th">4th Standard/ ನಾಲ್ಕನೇ ತರಗತಿ</option>
+                <option value="fifth">5th Standard/ ಐದನೇ ತರಗತಿ</option>
+                <option value="6th">6th Standard/ ಆರನೇ  ತರಗತಿ</option>
+                <option value="7th">7th Standard/ ಏಳನೇ ತರಗತಿ</option>
+                <option value="8th">8th Standard/ ಎಂಟನೇ ತರಗತಿ</option>
+                <option value="9th">9th Standard/ ಒಂಬತ್ತನೇ ತರಗತಿ</option>
+                <option value="10th">10th Standard/ ಹತ್ತನೇತರಗತಿ </option>
+                <option value="puc">I PUC/ 2nd PUC /[11/12th] ಪಿಯುಸಿ </option>
+                <option value="ug">Undergraduate /ಪದವಿಪೂರ್ವ</option>
+                <option value="pg">PostGraduate/ ಸ್ನಾತಕೋತ್ತರ </option>
+                <option value="other">Other/ ಇತರೆ</option>
             </select>
 
             <label for="schoolname">School Name/ ಶಾಲೆಯ  ಹೆಸರು <span>*</span></label>
-            <input type="schoolname" name="schoolname" required>
+            <input type="schoolname" id="schoolname" name="schoolname" required>
 
             <input type="submit" value="Submit/ ಸಲ್ಲಿಸಿ"> 
         </form>
@@ -175,8 +175,32 @@ if (savedLanguage){
 </script>
 
 <script>
-    const name=document.getElementById("name");
-    const phone=document.getElementById("phone");
+  <!---To collect form data--->
+  const form = document.getElementById("registForm");
+
+
+  form.addEventListener("submit",async function (event) {
+
+
+    e.preventDefault();  //stops normal form submusion
+
+    const formData={
+        name: document.getElementById("name").value,
+        phone: document.getElementById("phone").value,
+        fname: document.getElementById("fname").value,
+        mname: document.getElementById("mname").value,
+        age: document.getElementById("age").value,
+        address: document.getElementById("address").value,
+        className: document.getElementById("class").value,
+        schoolname: document.getElementById("schoolname").value,
+    };
+
+    console.log(formData);
+    
+  })
+
+  //sending data to bckend
+
 </script>
 </body>
 </html>
