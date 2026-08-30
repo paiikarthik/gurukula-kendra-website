@@ -175,37 +175,113 @@ if (savedLanguage){
 </script>
 
 <script>
-  <!---To collect form data--->
-  const form = document.getElementById("registForm");
+  
+// Get the form
+const form = document.getElementById("registrationForm");
 
 
-  form.addEventListener("submit",async function (event) {
+form.addEventListener("submit", async function(event) {
+
+    // Stop normal form submission
+    event.preventDefault();
 
 
-    e.preventDefault();  //stops normal form submusion
+    const name = document.getElementById("name").value.trim();
 
-    const formData={
-        name: document.getElementById("name").value,
-        phone: document.getElementById("phone").value,
-        fname: document.getElementById("fname").value,
-        mname: document.getElementById("mname").value,
-        age: document.getElementById("age").value,
-        address: document.getElementById("address").value,
-        className: document.getElementById("class").value,
-        schoolname: document.getElementById("schoolname").value,
+    const phone = document.getElementById("phone").value.trim();
+
+    const fatherName = document.getElementById("fname").value.trim();
+
+    const motherName = document.getElementById("mname").value.trim();
+
+    const age = document.getElementById("age").value;
+
+    const address = document.getElementById("address").value.trim();
+
+    const className = document.getElementById("class").value;
+
+    const schoolName = document.getElementById("schoolname").value.trim();
+
+
+   
+
+    const formData = {
+
+        name: name,
+
+        phone: phone,
+
+        fatherName: fatherName,
+
+        motherName: motherName,
+
+        age: age,
+
+        address: address,
+
+        className: className,
+
+        schoolName: schoolName
+
     };
 
-    console.log(formData);
-    
-  })
 
-  //sending data to bckend
+    // Check data in browser console
+    console.log("Form Data:", formData);
 
-  try{
-    const response= await fetch("/.netlify/functions/register".{
-        
-    })
-  }
+
+    try {
+
+        const response = await fetch("/register", {
+
+            method: "POST",
+
+            headers: {
+                "Content-Type": "application/json"
+            },
+
+            body: JSON.stringify(formData)
+
+        });
+
+
+        // Convert server response to JavaScript object
+        const result = await response.json();
+
+
+     
+        if (response.ok) {
+
+            alert("Registration successful!");
+
+
+            // Clear form
+            form.reset();
+
+
+        } else {
+
+            alert(
+                result.message ||
+                "Registration failed. Please try again."
+            );
+
+        }
+
+
+    } catch (error) {
+
+        // If backend cannot be reached
+        console.error("Error:", error);
+
+        alert(
+            "Unable to connect to the server. " +
+            "Please make sure the backend is running."
+        );
+
+    }
+
+});
 </script>
 </body>
 </html>
