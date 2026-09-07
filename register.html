@@ -61,7 +61,7 @@
             <input type="tel" id="phone" name="phone" pattern="[6-9][0-9]{9}" maxlength="13" required>
 
             <label for="fname">Father Name / ತಂದೆಯ ಹೆಸರು <span>*</span> </label>
-            <input type="text" name="fname" id="phone" required>
+            <input type="text" name="fname" id="fname" required>
 
             <label for="mname">Mother Name/ ತಾಯಿಯ  ಹೆಸರು <span>*</span> </label>
             <input type="text" name="mname" id="mname" required>
@@ -177,7 +177,7 @@ if (savedLanguage){
 <script>
   
 // Get the form
-const form = document.getElementById("registrationForm");
+const form = document.getElementById("registForm");
 
 
 form.addEventListener("submit", async function(event) {
@@ -224,62 +224,6 @@ form.addEventListener("submit", async function(event) {
         schoolName: schoolName
 
     };
-
-
-    // Check data in browser console
-    console.log("Form Data:", formData);
-
-
-    try {
-
-        const response = await fetch("/register", {
-
-            method: "POST",
-
-            headers: {
-                "Content-Type": "application/json"
-            },
-
-            body: JSON.stringify(formData)
-
-        });
-
-
-        // Convert server response to JavaScript object
-        const result = await response.json();
-
-
-     
-        if (response.ok) {
-
-            alert("Registration successful!");
-
-
-            // Clear form
-            form.reset();
-
-
-        } else {
-
-            alert(
-                result.message ||
-                "Registration failed. Please try again."
-            );
-
-        }
-
-
-    } catch (error) {
-
-        // If backend cannot be reached show err
-        console.error("Error:", error);
-
-        alert(
-            "Unable to connect to the server. " +
-            "Please make sure the backend is running."
-        );
-
-    }
 
 });
 </script>
